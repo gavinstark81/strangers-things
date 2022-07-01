@@ -1,4 +1,4 @@
-import { Post, Login } from "components";
+import { Posts, Login } from "components";
 import { Routes, Route } from "react-router-dom";
 
 export default function App() {
@@ -6,7 +6,7 @@ export default function App() {
     <>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/Post" element={<Post />} />
+        <Route path="/Posts" element={<Posts />} />
       </Routes>
     </>
   );
