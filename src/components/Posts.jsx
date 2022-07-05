@@ -3,7 +3,7 @@ import { fetchAllPosts } from "api/apiposts";
 
 function Posts() {
   const [posts, setPosts] = useState([]);
-
+  // console.log("posts are here", posts[0]);
   useEffect(() => {
     const getAllPost = async () => {
       const result = await fetchAllPosts();
@@ -19,12 +19,14 @@ function Posts() {
       {posts.map((post, index) => {
         return (
           <h4 key={`Key: ${index}`} post={post}>
-            {post.title}
+            <div>{post.title}</div>
+            <div>{post.author.username}</div>
+            <div>{post.price}</div>
+            <div>{post.description}</div>
           </h4>
         );
       })}
     </div>
   );
 }
-
 export default Posts;
