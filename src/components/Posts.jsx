@@ -17,7 +17,11 @@ function Posts() {
   return (
     <div>
       {posts.map((post, index) => {
-        return <h4>{posts.data}</h4>;
+        return (
+          <h4 key={`Key: ${index}`} post={post}>
+            {post.title}
+          </h4>
+        );
       })}
     </div>
   );
