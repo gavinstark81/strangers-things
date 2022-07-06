@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { fetchAllPosts } from "api/apiposts";
+import CreatePost from "./CreatePost";
 
 function Posts() {
   const [posts, setPosts] = useState([]);
@@ -16,6 +17,7 @@ function Posts() {
   // console.log("posts:", posts);
   return (
     <div>
+      <CreatePost />
       {posts.map((post, index) => {
         console.log(posts);
         return (
