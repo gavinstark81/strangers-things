@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { Register } from "components";
 import { loginUser } from "api/apiRegister";
-import { useNavigate } from "react-router-dom";
 
 export default function Login({ setToken }) {
-  let navigate = useNavigate();
   //console.log("heres login", setToken);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -14,6 +12,7 @@ export default function Login({ setToken }) {
       <div>Login:</div>
       <form
         onSubmit={async (e) => {
+          // try catch here would be nice and log error in red if user is already made
           e.preventDefault();
           const result = await loginUser(username, password);
           localStorage.setItem("token", result.data.token);
@@ -21,18 +20,19 @@ export default function Login({ setToken }) {
           setPassword("");
           setUsername("");
         }}
-      />
-      <input
-        value={username}
-        placeholder="username"
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
-        value={password}
-        placeholder="password"
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button type="submit">Submit</button>
+      >
+        <input
+          value={username}
+          placeholder="username"
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <input
+          value={password}
+          placeholder="password"
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button type="submit">Submit</button>
+      </form>
       <Register setToken={setToken} />
     </div>
   );
