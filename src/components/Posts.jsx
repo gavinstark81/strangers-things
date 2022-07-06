@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { fetchAllPosts } from "api/apiposts";
 import CreatePost from "./CreatePost";
+import Delete from "./Delete";
+import Edit from "./Edit";
 
 function Posts() {
   const [posts, setPosts] = useState([]);
@@ -17,20 +19,23 @@ function Posts() {
   // console.log("posts:", posts);
   return (
     <div>
-      <CreatePost />
       {posts.map((post, index) => {
         console.log(posts);
         return (
-          <h4 key={`Key: ${index}`} post={post}>
-            <div>{post.title}</div>
-            <div>{post.author.username}</div>
-            <div>{post.price}</div>
-            <div>{post.description}</div>
-            <div>{`Location: ${post.location}`}</div>
-            <div>
-              {post.willDeliver ? "Will deliver: Yes" : "Will deliver: No"}
-            </div>
-          </h4>
+          <>
+            <h4 key={`Key: ${index}`} post={post}>
+              <div>{post.title}</div>
+              <div>{post.author.username}</div>
+              <div>{post.price}</div>
+              <div>{post.description}</div>
+              <div>{`Location: ${post.location}`}</div>
+              <div>
+                {post.willDeliver ? "Will deliver: Yes" : "Will deliver: No"}
+              </div>
+            </h4>
+            <Delete />
+            <Edit />
+          </>
         );
       })}
     </div>

@@ -1,4 +1,4 @@
-import { Posts, Login, NavBar, Register, Logout } from "components";
+import { Posts, Login, NavBar, Register, Logout, Create } from "components";
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { fetchMe } from "api/apiRegister";
@@ -35,7 +35,8 @@ export default function App() {
         <Route path="/" element={<Login setToken={setToken} />} />
         <Route path="/Posts" element={<Posts />} />
         <Route path="/Login" element={<Login setToken={setToken} />} />
-        <Route path="/Logout" element={<Logout />} />
+        <Route path="/Logout" element={<Logout setToken={setToken} />} />
+        <Route path="/CreatePost" element={<Create token={token} />} />
       </Routes>
     </>
   );

@@ -8,6 +8,7 @@ export default function NavBar() {
       <Link to="/Posts">Posts</Link>
       {/* <Link to="/Login">Login</Link> */}
       <Link to="/Logout">Logout</Link>
+      <Link to="/createPost">Create Post</Link>
     </nav>
   );
 }

@@ -5,4 +5,4 @@ export { default as Logout } from "./Logout";
 export { default as Register } from "./Register";
 // export { default as SinglePost } from "./SinglePost";
 export { default as NavBar } from "./NavBar";
-export { default as CreatePost } from "./CreatePost";
+export { default as Create } from "./CreatePost";
