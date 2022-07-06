@@ -9,6 +9,7 @@ export default function Logout({ setToken }) {
     localStorage.clear();
     setToken(null);
     navigate("/");
+    document.location.reload(true); //I know we are trying to build a react page without reloading... but this works
   });
 
   return;
