@@ -12,3 +12,5 @@ export default function Delete() {
 //on click remove link... need to use deletepost from api
 //must check user id is matched to auth token or user id
 //double check props passed into deletepost is correct
+
+//we should make it so the delete and edit button only show when the userid===post id
