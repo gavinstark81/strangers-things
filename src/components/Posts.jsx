@@ -17,12 +17,17 @@ function Posts() {
   return (
     <div>
       {posts.map((post, index) => {
+        console.log(posts);
         return (
           <h4 key={`Key: ${index}`} post={post}>
             <div>{post.title}</div>
             <div>{post.author.username}</div>
             <div>{post.price}</div>
             <div>{post.description}</div>
+            <div>{`Location: ${post.location}`}</div>
+            <div>
+              {post.willDeliver ? "Will deliver: Yes" : "Will deliver: No"}
+            </div>
           </h4>
         );
       })}

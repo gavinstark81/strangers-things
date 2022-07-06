@@ -11,5 +11,3 @@ export default function NavBar() {
     </nav>
   );
 }
-
-//navigate from home to posts... work on register, login after

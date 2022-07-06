@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Login({ setToken }) {
   let navigate = useNavigate();
-  console.log("heres login", setToken);
+  //console.log("heres login", setToken);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 

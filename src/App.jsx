@@ -9,6 +9,7 @@ export default function App() {
 
   useEffect(() => {
     const localStorageToken = localStorage.getItem("token");
+
     console.log(localStorageToken);
     async function getMe() {
       const result = await fetchMe(localStorageToken);
@@ -23,6 +24,13 @@ export default function App() {
   return (
     <>
       <NavBar />
+      {currentUser?.username ? (
+        <h3
+          style={{ color: "green" }}
+        >{`Logged in as: ${currentUser.username}`}</h3>
+      ) : (
+        <h3 style={{ color: "red" }}>"Please log in or register for access"</h3>
+      )}
       <Routes>
         <Route path="/" element={<Login setToken={setToken} />} />
         <Route path="/Posts" element={<Posts />} />
