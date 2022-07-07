@@ -3,7 +3,6 @@ import { CreateNewPost } from "api/apiposts";
 import { useNavigate } from "react-router-dom";
 
 function Create({ token }) {
-  const [createPost, setCreatePost] = useState([]);
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
   const [title, setTitle] = useState("");
@@ -11,7 +10,7 @@ function Create({ token }) {
   const [location, setLocation] = useState("");
 
   const navigate = useNavigate();
-  console.log(willDeliver);
+  // console.log(willDeliver);
   return (
     <div>
       <form

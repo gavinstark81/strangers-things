@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { DeletePost } from "api/apiposts";
 
-export default function Delete() {
+export default function Delete(postObject) {
+  // console.log("the post object", postObject);
+  const [isActive, setIsActive] = useState(true);
+
   return (
     <div>
-      <button>Delete</button>
+      <button
+        onClick={async (e) => {
+          e.preventDefault();
+          const result = await DeletePost(); //not sure about values
+          setIsActive(false);
+        }}
+      >
+        Delete
+      </button>
     </div>
   );
 }

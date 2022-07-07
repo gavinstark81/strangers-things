@@ -1,7 +1,4 @@
-import login from "components/Login";
-
 const url = "https://strangers-things.herokuapp.com/api/2206-ftb-mt-web-ft";
-// const url = "http://localhost:3000";
 
 export const createUser = async (username, password) => {
   const response = await fetch(`${url}/users/register`, {
