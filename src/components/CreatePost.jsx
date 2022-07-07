@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { CreateNewPost } from "api/apiposts";
+import { createNewPost } from "api/apiposts";
 import { useNavigate } from "react-router-dom";
 
 function Create({ token }) {
@@ -10,13 +10,19 @@ function Create({ token }) {
   const [location, setLocation] = useState("");
 
   const navigate = useNavigate();
-  // console.log(willDeliver);
   return (
     <div>
       <form
         onSubmit={async (e) => {
-          e.preventDefault();
-          CreateNewPost({ price, description, title, willDeliver }, token);
+          e.preventDefault(); //capital function below bad...
+          await createNewPost(
+            { price, description, title, willDeliver },
+            token
+          );
+          //await createnewpost, pass posts,setposts into, create posts returns newposts
+          //new array w new posts in it. spread > splice
+          //morning review spread operrator
+
           navigate("/Posts");
         }}
       >

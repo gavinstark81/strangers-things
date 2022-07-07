@@ -5,8 +5,8 @@ import React from "react";
 
 export default function edit() {
   return (
-    <div>
+    <span>
       <button>Edit</button>
-    </div>
+    </span>
   );
 }

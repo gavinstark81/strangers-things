@@ -1,4 +1,4 @@
-import { Posts, Login, NavBar, Logout, Create } from "components";
+import { Posts, Login, NavBar, Logout, Create, Messages } from "components";
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { fetchMe } from "api/apiRegister";
@@ -10,7 +10,7 @@ export default function App() {
   useEffect(() => {
     const localStorageToken = localStorage.getItem("token");
 
-    console.log(localStorageToken);
+    // console.log(localStorageToken);
     async function getMe() {
       const result = await fetchMe(localStorageToken);
       setCurrentUser(result.data);
@@ -33,10 +33,22 @@ export default function App() {
       )}
       <Routes>
         <Route path="/" element={<Login setToken={setToken} />} />
-        <Route path="/Posts" element={<Posts currentUser={currentUser} />} />
+        <Route
+          path="/Posts"
+          element={<Posts currentUser={currentUser} token={token} />}
+        />
         <Route path="/Login" element={<Login setToken={setToken} />} />
         <Route path="/CreatePost" element={<Create token={token} />} />
-        <Route path="/Logout" element={<Logout setToken={setToken} />} />
+        <Route
+          path="/Logout"
+          element={
+            <Logout setToken={setToken} setCurrentUser={setCurrentUser} />
+          }
+        />
+        <Route
+          path="/Messages"
+          element={<Messages currentUser={currentUser} />}
+        />
       </Routes>
     </>
   );

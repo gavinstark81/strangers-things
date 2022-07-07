@@ -1,14 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-export default function Logout({ setToken }) {
+export default function Logout({ setToken, setCurrentUser }) {
   const navigate = useNavigate();
-
   useEffect(() => {
-    localStorage.clear();
+    localStorage.removeItem("token");
     setToken(null);
+    setCurrentUser(null);
     navigate("/");
-    document.location.reload(true); //I know we are trying to build a react page without reloading... but this works
   });
 
   return;

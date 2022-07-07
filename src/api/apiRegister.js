@@ -18,7 +18,6 @@ export const createUser = async (username, password) => {
 };
 
 export const loginUser = async (username, password) => {
-  console.log("the username from apireg is:", username);
   const response = await fetch(`${url}/users/login`, {
     method: "POST",
     headers: {

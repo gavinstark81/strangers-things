@@ -1,24 +1,32 @@
 import React, { useState } from "react";
 import { DeletePost } from "api/apiposts";
 
-export default function Delete(postObject) {
+export default function Delete({ postId, token, posts, setPosts }) {
   // console.log("the post object", postObject);
-  const [isActive, setIsActive] = useState(true);
 
   return (
-    <div>
+    <span>
       <button
         onClick={async (e) => {
+          console.log("post id troubleshoot: ", e.postId);
           e.preventDefault();
-          const result = await DeletePost(); //not sure about values
-          setIsActive(false);
+          const result = await DeletePost(postId, token); //not sure about values
+          console.log(result);
+          if (result.success) {
+            const filteredPosts = posts.filter((post) => {
+              return post._id !== postId;
+            });
+            setPosts(filteredPosts);
+          }
         }}
       >
         Delete
       </button>
-    </div>
+    </span>
   );
 }
+
+// {currentUser._id === post.author._id ? <Delete /> : null}
 
 //on click remove link... need to use deletepost from api
 //must check user id is matched to auth token or user id
