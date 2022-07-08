@@ -15,7 +15,7 @@ function Messages({ currentUser }) {
       {currentUser.messages.map((message, content) => {
         return (
           <>
-            <p>{currentUser.messages[0].content}</p>
+            <p>{currentUser.messages[content].content}</p>
           </>
         );
       })}
@@ -29,3 +29,5 @@ export default Messages;
 //however its logged twice so we need to figure out why.
 //using currentUser.messages[0] will obviously only log the first message in the array.
 //i guess map over all messages to a new array and return that new array on the messages page?
+
+//FRIDAY NOTES: was able to get all messages to render by using [content] instead
