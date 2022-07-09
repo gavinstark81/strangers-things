@@ -1,4 +1,12 @@
-import { Posts, Login, NavBar, Logout, Create, Messages } from "components";
+import {
+  Posts,
+  Login,
+  NavBar,
+  Logout,
+  Create,
+  Messages,
+  SinglePost,
+} from "components";
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { fetchMe } from "api/apiRegister";
@@ -48,6 +56,10 @@ export default function App() {
         <Route
           path="/Messages"
           element={<Messages currentUser={currentUser} />}
+        />
+        <Route
+          path="/SinglePost"
+          element={<SinglePost currentUser={currentUser} />}
         />
       </Routes>
     </>

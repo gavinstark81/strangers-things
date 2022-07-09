@@ -61,7 +61,7 @@ export const sendMessage = async (messages, token, postId) => {
 // adding the edit function but not invoking it yet
 // export const EditPost = async () => {
 //   const response = await fetch (`https://strangers-things.herokuapp.com/api/2206-ftb-mt-web-ft/posts/${postId}`{
-//     method: "POST",
+//     method: "PATCH",
 //     headers: {
 //       "Content-Type": "application/json",
 //       Authorization: `Bearer ${token}`
@@ -70,3 +70,5 @@ export const sendMessage = async (messages, token, postId) => {
 //   const result = await response.json()
 //   return result
 // }
+
+//changed method from POST to PATCH

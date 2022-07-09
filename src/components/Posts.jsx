@@ -22,7 +22,7 @@ function Posts({ currentUser, token }) {
     <div>
       {posts.map((post, index) => {
         //console.log(posts);
-        console.log(currentUser.posts);
+        // console.log(currentUser.posts);
         return (
           <>
             <h4 key={`Key: ${index}`} post={post}>

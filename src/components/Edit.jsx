@@ -1,12 +1,15 @@
-import React from "react";
-// import { DeletePost } from "api/apiposts";..... prob need to create and import editpost
-
 // import EditPost from "api/apiposts";
 
-export default function edit() {
+export default function Edit() {
   return (
     <span>
-      <button>Edit</button>
+      <button>
+        <a href="SinglePost" type="button">
+          Edit Post
+        </a>
+      </button>
     </span>
   );
 }
+
+//maybe we can make the edit button route us to singlepost where we have a form element to edit?

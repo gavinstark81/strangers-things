@@ -1,7 +1,5 @@
-import React from "react";
-
-function SinglePost() {
-  return <div>SinglePost</div>;
+function SinglePost({ currentUser }) {
+  console.log(currentUser);
+  return <div>test</div>;
 }
-
 export default SinglePost;

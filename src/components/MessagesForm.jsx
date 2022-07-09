@@ -3,7 +3,6 @@ import { useState } from "react";
 
 function MessagesForm({ postId, token }) {
   const [message, setMessage] = useState("");
-  console.log(message);
   return (
     <span>
       <form
