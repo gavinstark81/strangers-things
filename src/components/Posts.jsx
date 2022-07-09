@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { fetchAllPosts } from "api/apiposts";
 import Delete from "./Delete";
 import Edit from "./Edit";
-import Messages from "./MessagesForm";
+//import Messages from "./MessagesForm";
 import MessagesForm from "./MessagesForm";
 
 function Posts({ currentUser, token }) {
