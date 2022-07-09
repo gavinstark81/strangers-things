@@ -12,10 +12,13 @@
 function Messages({ currentUser }) {
   return (
     <div>
-      {currentUser.messages.map((message, content) => {
+      {currentUser.messages.map((message, index) => {
+        console.log(message);
         return (
           <>
-            <p>{currentUser.messages[content].content}</p>
+            <p>Post Title: {message.post.title}</p>
+            <p>From: {message.fromUser.username}</p>
+            <p>{currentUser.messages[index].content}</p>
           </>
         );
       })}
@@ -31,3 +34,7 @@ export default Messages;
 //i guess map over all messages to a new array and return that new array on the messages page?
 
 //FRIDAY NOTES: was able to get all messages to render by using [content] instead
+
+//in posts we have a console log for username. this will show all messages sent to user
+// as well as all posts that user has made... deleted ones are set to active: false
+//thus we should render any posts that are active: true && that have messages
