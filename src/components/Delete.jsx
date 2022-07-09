@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { DeletePost } from "api/apiposts";
 
 export default function Delete({ postId, token, posts, setPosts }) {
