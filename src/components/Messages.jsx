@@ -1,13 +1,4 @@
-// function Messages({currentUser}) {
-//   return (<div>
-//   {currentUser.Messages.map((message, content) => {
-//      return ()
-//   }};
-
-//   </div>
-// ))}
-
-// export default Messages;
+import "./messages.css";
 
 function Messages({ currentUser }) {
   return (
@@ -16,9 +7,11 @@ function Messages({ currentUser }) {
         console.log(message);
         return (
           <>
-            <p>Post Title: {message.post.title}</p>
-            <p>From: {message.fromUser.username}</p>
-            <p>{currentUser.messages[index].content}</p>
+            <div className="messageBoard">
+              <p>Post Title: {message.post.title}</p>
+              <p>From: {message.fromUser.username}</p>
+              <p>{currentUser.messages[index].content}</p>
+            </div>
           </>
         );
       })}
@@ -26,15 +19,3 @@ function Messages({ currentUser }) {
   );
 }
 export default Messages;
-//<h4>{currentUser.messages[0].content}</h4>
-
-//END OF DAY THURSDAY NOTES: we just got the message testing to render on the messages page..
-//however its logged twice so we need to figure out why.
-//using currentUser.messages[0] will obviously only log the first message in the array.
-//i guess map over all messages to a new array and return that new array on the messages page?
-
-//FRIDAY NOTES: was able to get all messages to render by using [content] instead
-
-//in posts we have a console log for username. this will show all messages sent to user
-// as well as all posts that user has made... deleted ones are set to active: false
-//thus we should render any posts that are active: true && that have messages

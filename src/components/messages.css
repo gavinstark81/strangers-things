@@ -1,0 +1,6 @@
+.messageBoard:nth-child(odd) {
+  background-color: aquamarine;
+}
+.messageBoard:nth-child(even) {
+  background-color: aqua;
+}
