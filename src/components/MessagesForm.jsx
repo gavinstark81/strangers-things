@@ -1,5 +1,6 @@
 import { sendMessage } from "api/apiposts";
 import { useState } from "react";
+import "./MessageForm.css";
 
 function MessagesForm({ postId, token }) {
   const [message, setMessage] = useState("");
@@ -17,7 +18,9 @@ function MessagesForm({ postId, token }) {
           placeholder="message"
           onChange={(e) => setMessage(e.target.value)}
         />
-        <button type="submit">Send message</button>
+        <button type="submit" className="MessageButton">
+          Send message
+        </button>
       </form>
     </span>
   );

@@ -1,0 +1,11 @@
+.MessageButton:target {
+  background-color: green;
+}
+
+.MessageButton {
+  background-color: grey;
+}
+
+.MessageButton:hover {
+  background-color: lightblue;
+}

@@ -21,7 +21,7 @@ function Posts({ currentUser, token }) {
   // console.log("posts:", posts);
   return (
     <div>
-      <Search posts={posts} />
+      <Search posts={posts} setPosts={setPosts} />
       {posts.map((post, index) => {
         //console.log(posts);
         // console.log(currentUser.posts);
