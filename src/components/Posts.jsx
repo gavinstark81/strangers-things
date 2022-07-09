@@ -4,6 +4,7 @@ import Delete from "./Delete";
 import Edit from "./Edit";
 //import Messages from "./MessagesForm";
 import MessagesForm from "./MessagesForm";
+import Search from "./Search";
 
 function Posts({ currentUser, token }) {
   const [posts, setPosts] = useState([]);
@@ -20,6 +21,7 @@ function Posts({ currentUser, token }) {
   // console.log("posts:", posts);
   return (
     <div>
+      <Search posts={posts} />
       {posts.map((post, index) => {
         //console.log(posts);
         // console.log(currentUser.posts);

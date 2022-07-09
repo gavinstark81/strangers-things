@@ -7,5 +7,6 @@ export { default as SinglePost } from "./SinglePost";
 export { default as NavBar } from "./NavBar";
 export { default as Create } from "./CreatePost";
 export { default as Messages } from "./Messages";
+export { default as Search } from "./Search";
 
 //export edit needed??
