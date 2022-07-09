@@ -44,7 +44,7 @@ function Posts({ currentUser, token }) {
               />
             ) : null}
             {currentUser._id === post.author._id ? (
-              <Edit postId={post._id} token={token} />
+              <Edit postId={post._id} token={token} posts={posts} />
             ) : null}
             {currentUser._id !== post.author._id ? (
               <MessagesForm postId={post._id} token={token} />
