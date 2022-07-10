@@ -32,7 +32,7 @@ export default function Register({ setToken }) {
           placeholder="password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button className="register" type="submit">
+        <button className="registerButton" type="submit">
           Submit
         </button>
       </form>

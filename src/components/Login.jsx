@@ -41,7 +41,7 @@ export default function Login({ setToken, result }) {
           placeholder="password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button className="login" type="submit">
+        <button className="loginButton" type="submit">
           Submit
         </button>
       </form>

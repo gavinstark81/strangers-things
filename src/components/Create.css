@@ -1,0 +1,80 @@
+.title {
+  display: flex;
+  color: aqua;
+  border: 3px solid black;
+  margin-left: 40%;
+  padding-left: 9%;
+  font-size: 25px;
+
+  margin-bottom: 50px;
+}
+
+.description {
+  display: flex;
+  color: aqua;
+  border: 3px solid black;
+  margin-left: 40%;
+  padding-left: 9%;
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+
+.price {
+  display: flex;
+  color: aqua;
+  border: 3px solid black;
+  margin-left: 40%;
+  padding-left: 9%;
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+
+.location {
+  display: flex;
+  color: aqua;
+  border: 3px solid black;
+  margin-left: 40%;
+  padding-left: 9%;
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+
+.deliver {
+  display: flex;
+  text-align: center;
+}
+
+.willDeliver {
+  display: flex;
+  margin-left: 45%;
+  font-size: 25px;
+}
+
+.submit {
+  display: inline-flex;
+  height: 50px;
+  padding: 0;
+  background: rgb(235, 78, 235);
+  border: 3px solid blue;
+  outline: none;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 2vh;
+  font-size: 4vh;
+  font-weight: 500;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  margin-left: 45%;
+}
+
+.submit:hover {
+  background: rgb(180, 20, 180);
+}
+
+.submit:active {
+  background: purple;
+}
+
+/* need to get the will deliver box and text to be close and centered */

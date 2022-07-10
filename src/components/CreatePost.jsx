@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { createNewPost } from "api/apiposts";
 import { useNavigate } from "react-router-dom";
+import "./Create.css";
 
 function Create({ token }) {
   const [price, setPrice] = useState("");
@@ -27,32 +28,39 @@ function Create({ token }) {
         }}
       >
         <input
+          className="title"
           value={title}
           placeholder="Title"
           onChange={(e) => setTitle(e.target.value)}
         />
         <input
+          className="description"
           value={description}
           placeholder="Description"
           onChange={(e) => setDescription(e.target.value)}
         />
         <input
+          className="price"
           value={price}
           placeholder="Price"
           onChange={(e) => setPrice(e.target.value)}
         />
         <input
+          className="location"
           value={location}
           placeholder="Location"
           onChange={(e) => setLocation(e.target.value)}
         />
-        <label>Will Deliver</label>
+        <label className="willDeliver">Will Deliver</label>
         <input
+          className="deliver"
           checked={willDeliver}
           type={"checkbox"}
           onChange={(e) => setWillDeliver(e.target.checked)}
         />
-        <button type="submit">Create</button>
+        <button className="submit" type="submit">
+          Make the post
+        </button>
       </form>
     </div>
   );

@@ -1,22 +1,75 @@
 .register {
   display: flex;
-  justify-content: center;
-  background-color: aqua;
+  margin-left: 45%;
+  margin-right: 43%;
   text-align: center;
-  border: 1px solid black;
+  border: 5px solid black;
   font-size: 25px;
+  padding: 15px;
+  margin-top: 15px;
 }
 
 .login {
   display: flex;
-  justify-content: center;
-  background-color: aqua;
+  margin-left: 45%;
   text-align: center;
-  border: 1px solid black;
+  margin-right: 43%;
   font-size: 25px;
+  padding: 15px;
+  border: 5px solid black;
+  margin-top: 15px;
 }
 
-.loginPlaceholder {
-  display: flex;
+.loginButton {
+  display: inline-flex;
+  height: 50px;
+  padding: 0;
+  background: rgb(235, 78, 235);
+  border: 3px solid blue;
+  outline: none;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 2vh;
+  font-size: 4vh;
+  font-weight: 500;
+  cursor: pointer;
+  align-items: center;
   justify-content: center;
+  margin-left: 48%;
+}
+
+.registerButton {
+  display: inline-flex;
+  height: 50px;
+  padding: 0;
+  background: rgb(235, 78, 235);
+  border: 3px solid blue;
+  outline: none;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 2vh;
+  font-size: 4vh;
+  font-weight: 500;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  margin-left: 48%;
+}
+
+.loginButton:hover {
+  background: rgb(180, 20, 180);
+}
+
+.loginButton:active {
+  background: purple;
+}
+
+.registerButton:hover {
+  background: rgb(180, 20, 180);
+}
+
+.registerButton:active {
+  background: purple;
 }
