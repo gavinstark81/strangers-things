@@ -1,5 +1,4 @@
 function SinglePost({ currentUser }) {
-  console.log(currentUser.posts);
   return (
     <>
       <div>{currentUser.post}</div>

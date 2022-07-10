@@ -4,7 +4,6 @@ import "./Login.css";
 export default function Register({ setToken }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  // const [token, setToken] = useState("");
 
   return (
     <div>
@@ -13,7 +12,6 @@ export default function Register({ setToken }) {
         onSubmit={async (e) => {
           e.preventDefault();
           const result = await createUser(username, password);
-          console.log("heres result", result);
           localStorage.setItem("token", result.data.token);
           setToken(result.data.token);
           setPassword("");

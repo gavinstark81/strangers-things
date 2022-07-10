@@ -16,8 +16,6 @@
   margin-bottom: 15px;
   height: 20vh;
   width: 60vw;
-  /* inline-size: 150px;
-  overflow-wrap: break-word; */
 }
 
 .price {
@@ -73,5 +71,3 @@
 .submit:active {
   background: purple;
 }
-
-/* need to get the will deliver box and text to be close and centered */

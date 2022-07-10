@@ -1,17 +1,13 @@
 import { DeletePost } from "api/apiposts";
 import "./edit-del.css";
 export default function Delete({ postId, token, posts, setPosts }) {
-  // console.log("the post object", postObject);
-
   return (
     <span>
       <button
         className="button"
         onClick={async (e) => {
-          console.log("post id troubleshoot: ", e.postId);
           e.preventDefault();
-          const result = await DeletePost(postId, token); //not sure about values
-          console.log(result);
+          const result = await DeletePost(postId, token);
           if (result.success) {
             const filteredPosts = posts.filter((post) => {
               return post._id !== postId;

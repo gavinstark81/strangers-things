@@ -18,7 +18,6 @@ export default function App() {
   useEffect(() => {
     const localStorageToken = localStorage.getItem("token");
 
-    // console.log(localStorageToken);
     async function getMe() {
       const result = await fetchMe(localStorageToken);
       setCurrentUser(result.data);

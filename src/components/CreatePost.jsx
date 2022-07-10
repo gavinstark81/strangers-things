@@ -15,14 +15,11 @@ function Create({ token }) {
     <div>
       <form
         onSubmit={async (e) => {
-          e.preventDefault(); //capital function below bad...
+          e.preventDefault();
           await createNewPost(
             { price, description, title, willDeliver },
             token
           );
-          //await createnewpost, pass posts,setposts into, create posts returns newposts
-          //new array w new posts in it. spread > splice
-          //morning review spread operrator
 
           navigate("/Posts");
         }}

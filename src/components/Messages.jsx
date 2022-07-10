@@ -6,7 +6,6 @@ function Messages({ currentUser }) {
     return (
       <div>
         {currentUser.messages.map((message, index) => {
-          //console.log(message);
           return (
             <>
               <div className="messageBoard">

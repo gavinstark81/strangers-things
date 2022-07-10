@@ -13,7 +13,6 @@ const useAuth = () => {
 
     async function getMe() {
       const result = await fetchMe(localStorageToken);
-      console.log("result from fetch me auth.js", result);
       setCurrentUser(result.data);
       setToken(localStorageToken);
     }

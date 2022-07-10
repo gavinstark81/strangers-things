@@ -39,7 +39,6 @@ export const DeletePost = async (postId, token) => {
   return result;
 };
 
-//work on onclick functionality before checking if messages are sent to api
 export const sendMessage = async (messages, token, postId) => {
   const response = await fetch(
     `https://strangers-things.herokuapp.com/api/2206-ftb-mt-web-ft/posts/${postId}/messages`,

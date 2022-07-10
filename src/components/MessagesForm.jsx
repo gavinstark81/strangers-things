@@ -9,7 +9,6 @@ function MessagesForm({ postId, token }) {
       <form
         onSubmit={async (e) => {
           e.preventDefault();
-          console.log(message);
           await sendMessage(message, token, postId);
         }}
       >

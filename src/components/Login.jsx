@@ -4,7 +4,6 @@ import { loginUser } from "api/apiRegister";
 import "./Login.css";
 
 export default function Login({ setToken, result }) {
-  //console.log("heres login", setToken);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");

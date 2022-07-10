@@ -9,23 +9,18 @@ import "./Posts.css";
 
 function Posts({ currentUser, token }) {
   const [posts, setPosts] = useState([]);
-  // console.log("posts are here", posts);
   useEffect(() => {
     const getAllPost = async () => {
       const result = await fetchAllPosts();
       setPosts(result.data.posts);
-      // console.log("heres the stuff", result.data.posts);
     };
     getAllPost();
-    // console.log("heres the effect", useEffect);
   }, []);
-  // console.log("posts:", posts);
+
   return (
     <div>
       <Search posts={posts} setPosts={setPosts} />
       {posts.map((post, index) => {
-        //console.log(posts);
-        // console.log(currentUser.posts);
         return (
           <>
             <h4 key={`Key: ${index}`} post={post} className="postCard">
