@@ -1,5 +1,28 @@
 .NavBar {
   display: flex;
   justify-content: space-evenly;
-  background-color: lightblue;
+  background-color: rgb(100, 5, 100);
+  border: 5px solid black;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.home {
+  background-color: rgb(230, 56, 85);
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  text-decoration: none;
+  border-radius: 10px;
+  color: white;
+}
+
+.home:hover {
+  background-color: pink;
+  color: aquamarine;
+}
+
+.home:active {
+  background-color: rgb(102, 8, 24);
+  color: blue;
 }

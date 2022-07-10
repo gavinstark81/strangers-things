@@ -1,6 +1,6 @@
 import { createUser } from "api/apiRegister";
 import React, { useState } from "react";
-
+import "./Login.css";
 export default function Register({ setToken }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -8,7 +8,7 @@ export default function Register({ setToken }) {
 
   return (
     <div>
-      <div>Register:</div>
+      <div className="register">Register:</div>
       <form
         onSubmit={async (e) => {
           e.preventDefault();
@@ -21,16 +21,20 @@ export default function Register({ setToken }) {
         }}
       >
         <input
+          className="register"
           value={username}
           placeholder="username"
           onChange={(e) => setUsername(e.target.value)}
         />
         <input
+          className="register"
           value={password}
           placeholder="password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Submit</button>
+        <button className="register" type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );

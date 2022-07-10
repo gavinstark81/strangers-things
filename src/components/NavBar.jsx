@@ -5,11 +5,28 @@ import "./NavBar.css";
 export default function NavBar() {
   return (
     <nav className="NavBar">
-      <Link to="/"> Home/Login </Link>
-      <Link to="/Posts"> Posts </Link>
-      <Link to="/createPost"> Create Post </Link>
-      <Link to="/Messages">Messages</Link>
-      <Link to="/Logout"> Logout </Link>
+      <Link className="home" to="/">
+        Home/Login
+      </Link>
+
+      <Link className="home" to="/Posts">
+        {" "}
+        Posts{" "}
+      </Link>
+
+      <Link className="home" to="/createPost">
+        {" "}
+        Create Post{" "}
+      </Link>
+
+      <Link className="home" to="/Messages">
+        Messages
+      </Link>
+
+      <Link className="home" to="/Logout">
+        {" "}
+        Logout{" "}
+      </Link>
     </nav>
   );
 }

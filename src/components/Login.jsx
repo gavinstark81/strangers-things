@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Register } from "components";
 import { loginUser } from "api/apiRegister";
+import "./Login.css";
 
 export default function Login({ setToken, result }) {
   //console.log("heres login", setToken);
@@ -10,7 +11,7 @@ export default function Login({ setToken, result }) {
 
   return (
     <div>
-      <div>Login:</div>
+      <div className="login">Login:</div>
       {errorMessage ? <h4 style={{ color: "red" }}>{errorMessage}</h4> : null}
       <form
         onSubmit={async (e) => {
@@ -29,16 +30,20 @@ export default function Login({ setToken, result }) {
         }}
       >
         <input
+          className="login"
           value={username}
           placeholder="username"
           onChange={(e) => setUsername(e.target.value)}
         />
         <input
+          className="login"
           value={password}
           placeholder="password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Submit</button>
+        <button className="login" type="submit">
+          Submit
+        </button>
       </form>
       <Register setToken={setToken} />
     </div>
