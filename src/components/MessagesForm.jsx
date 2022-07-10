@@ -13,14 +13,15 @@ function MessagesForm({ postId, token }) {
           await sendMessage(message, token, postId);
         }}
       >
+        <button type="submit" className="MessageButton">
+          Send message
+        </button>
         <input
           value={message}
           placeholder="message"
           onChange={(e) => setMessage(e.target.value)}
+          className="MessageBox"
         />
-        <button type="submit" className="MessageButton">
-          Send message
-        </button>
       </form>
     </span>
   );

@@ -10,9 +10,9 @@ function Messages({ currentUser }) {
           return (
             <>
               <div className="messageBoard">
-                <p>Post Title: {message.post.title}</p>
-                <p>From: {message.fromUser.username}</p>
-                <p>{currentUser.messages[index].content}</p>
+                <p> Post Title: {message.post.title}</p>
+                <p> From: {message.fromUser.username}</p>
+                <p> Message: {currentUser.messages[index].content}</p>
               </div>
             </>
           );

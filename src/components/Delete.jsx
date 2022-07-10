@@ -1,11 +1,12 @@
 import { DeletePost } from "api/apiposts";
-
+import "./edit-del.css";
 export default function Delete({ postId, token, posts, setPosts }) {
   // console.log("the post object", postObject);
 
   return (
     <span>
       <button
+        className="button"
         onClick={async (e) => {
           console.log("post id troubleshoot: ", e.postId);
           e.preventDefault();

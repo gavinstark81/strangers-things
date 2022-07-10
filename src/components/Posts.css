@@ -1,0 +1,10 @@
+.postCard {
+  display: grid;
+  grid-template: auto 1fr;
+  gap: 10px;
+  margin-top: 10px;
+  border: 3px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(154, 124, 168);
+}

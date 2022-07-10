@@ -59,7 +59,7 @@ function Create({ token }) {
           onChange={(e) => setWillDeliver(e.target.checked)}
         />
         <button className="submit" type="submit">
-          Make the post
+          Create
         </button>
       </form>
     </div>

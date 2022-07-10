@@ -1,4 +1,8 @@
-//PARTNER NOTES. FROM RUBRIC NEED TO COMPLETE:
+//NOTES FOR TEACHER:
+// - search function did not work, but when the code is struck in on search.jsx the console log should return whatever
+// letters are placed into the search bar, we think this is an important feature for the search bar.
+//-For edit we knew to change the method to PATCH, we made a route to singlepost from the edit button that would have been nice
+// to render the specific post you clicked edit on and have a form to input those edits and return you to posts page.
 
 // /profile (with messages)
 // Unauthenticated Users should be able to:
@@ -17,8 +21,8 @@
 // Create a new post [X]
 // Delete a post for which they are the author [X]
 // Send a message to the author of any post for which they are not the author [X]
-// See all messages for any post for which they are the author [DOES NOT WORK YET]
-// See all messages they've received in a special view [DOES NOT WORK YET]
+// See all messages for any post for which they are the author [X]
+// See all messages they've received in a special view [X]
 
 // Authenticated Users should not be able to:
 

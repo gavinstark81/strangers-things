@@ -2,41 +2,40 @@
   display: flex;
   color: aqua;
   border: 3px solid black;
-  margin-left: 40%;
-  padding-left: 9%;
   font-size: 25px;
-
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+  height: 2vh;
+  width: 30vw;
 }
 
 .description {
   display: flex;
   color: aqua;
   border: 3px solid black;
-  margin-left: 40%;
-  padding-left: 9%;
   font-size: 25px;
-  margin-bottom: 50px;
+  margin-bottom: 15px;
+  height: 20vh;
+  width: 60vw;
+  /* inline-size: 150px;
+  overflow-wrap: break-word; */
 }
 
 .price {
   display: flex;
   color: aqua;
   border: 3px solid black;
-  margin-left: 40%;
-  padding-left: 9%;
   font-size: 25px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
+  width: 20vw;
 }
 
 .location {
   display: flex;
   color: aqua;
   border: 3px solid black;
-  margin-left: 40%;
-  padding-left: 9%;
   font-size: 25px;
   margin-bottom: 50px;
+  width: 20vw;
 }
 
 .deliver {
@@ -46,7 +45,6 @@
 
 .willDeliver {
   display: flex;
-  margin-left: 45%;
   font-size: 25px;
 }
 
@@ -66,7 +64,6 @@
   cursor: pointer;
   align-items: center;
   justify-content: center;
-  margin-left: 45%;
 }
 
 .submit:hover {

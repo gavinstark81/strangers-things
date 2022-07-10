@@ -9,3 +9,12 @@
 .MessageButton:hover {
   background-color: lightblue;
 }
+
+.MessageBox {
+  display: flex;
+  float: right;
+}
+.MessageButton {
+  display: flex;
+  float: right;
+}

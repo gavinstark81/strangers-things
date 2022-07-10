@@ -8,7 +8,7 @@ export default function Register({ setToken }) {
 
   return (
     <div>
-      <div className="register">Register:</div>
+      <div id="logTitle">Register:</div>
       <form
         onSubmit={async (e) => {
           e.preventDefault();
@@ -21,18 +21,18 @@ export default function Register({ setToken }) {
         }}
       >
         <input
-          className="register"
+          className="login"
           value={username}
           placeholder="username"
           onChange={(e) => setUsername(e.target.value)}
         />
         <input
-          className="register"
+          className="login"
           value={password}
           placeholder="password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button className="registerButton" type="submit">
+        <button className="loginButton" type="submit">
           Submit
         </button>
       </form>

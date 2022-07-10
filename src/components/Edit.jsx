@@ -1,10 +1,10 @@
 // import EditPost from "api/apiposts";
-
+import "./edit-del.css";
 export default function Edit() {
   return (
     <span>
-      <button>
-        <a href="SinglePost" type="button">
+      <button className="button">
+        <a href="SinglePost" type="button" className="button">
           Edit Post
         </a>
       </button>

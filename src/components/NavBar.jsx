@@ -10,13 +10,11 @@ export default function NavBar() {
       </Link>
 
       <Link className="home" to="/Posts">
-        {" "}
-        Posts{" "}
+        Posts
       </Link>
 
       <Link className="home" to="/createPost">
-        {" "}
-        Create Post{" "}
+        Create Post
       </Link>
 
       <Link className="home" to="/Messages">
@@ -24,8 +22,7 @@ export default function NavBar() {
       </Link>
 
       <Link className="home" to="/Logout">
-        {" "}
-        Logout{" "}
+        Logout
       </Link>
     </nav>
   );

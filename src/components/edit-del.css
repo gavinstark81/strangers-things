@@ -1,0 +1,17 @@
+.button {
+  display: flex;
+  float: right;
+  text-decoration: none;
+  background-color: grey;
+  color: red;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: lightblue;
+  color: olivedrab;
+}
+
+.button:active {
+  color: green;
+}

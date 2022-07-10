@@ -5,6 +5,7 @@ import Edit from "./Edit";
 //import Messages from "./MessagesForm";
 import MessagesForm from "./MessagesForm";
 import Search from "./Search";
+import "./Posts.css";
 
 function Posts({ currentUser, token }) {
   const [posts, setPosts] = useState([]);
@@ -27,7 +28,7 @@ function Posts({ currentUser, token }) {
         // console.log(currentUser.posts);
         return (
           <>
-            <h4 key={`Key: ${index}`} post={post}>
+            <h4 key={`Key: ${index}`} post={post} className="postCard">
               <div>{`Title: ${post.title}`}</div>
               <div>{`Username: ${post.author.username}`}</div>
               <div>{`Price: ${post.price}`}</div>
@@ -35,22 +36,22 @@ function Posts({ currentUser, token }) {
               <div>{`Location: ${post.location}`}</div>
               <div>
                 {post.willDeliver ? "Will deliver: Yes" : "Will deliver: No"}
+                {currentUser._id === post.author._id ? (
+                  <Delete
+                    postId={post._id}
+                    token={token}
+                    posts={posts}
+                    setPosts={setPosts}
+                  />
+                ) : null}
+                {currentUser._id === post.author._id ? (
+                  <Edit postId={post._id} token={token} posts={posts} />
+                ) : null}
+                {currentUser._id !== post.author._id ? (
+                  <MessagesForm postId={post._id} token={token} />
+                ) : null}
               </div>
             </h4>
-            {currentUser._id === post.author._id ? (
-              <Delete
-                postId={post._id}
-                token={token}
-                posts={posts}
-                setPosts={setPosts}
-              />
-            ) : null}
-            {currentUser._id === post.author._id ? (
-              <Edit postId={post._id} token={token} posts={posts} />
-            ) : null}
-            {currentUser._id !== post.author._id ? (
-              <MessagesForm postId={post._id} token={token} />
-            ) : null}
           </>
         );
       })}

@@ -11,7 +11,7 @@ export default function Login({ setToken, result }) {
 
   return (
     <div>
-      <div className="login">Login:</div>
+      <div id="logTitle">Login:</div>
       {errorMessage ? <h4 style={{ color: "red" }}>{errorMessage}</h4> : null}
       <form
         onSubmit={async (e) => {
